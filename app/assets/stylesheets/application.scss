@@ -15,6 +15,27 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.container-fluid {
+    padding: 0px;
+}
+
+.head_row {
+    background-color: black;
+}
+
+.logo_sign {
+    height: 60px;
+    width: 60px;
+}
+
+nav {
+    float: right;
+    margin-top: 8px;
+    margin-right: 10px;
+}
+
+.edit_user_page,
+.sign_in_page,
 .sign_up_view,
 .welcome_view {
     text-align: center;

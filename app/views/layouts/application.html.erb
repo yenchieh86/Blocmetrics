@@ -9,8 +9,32 @@
   </head>
 
   <body>
-    <div class='row'>
-      <%= yield %>
+    <div class='container-fluid'>
+      <div class='head_row'>
+        <%= link_to  image_tag( 'http://bsccongress.com/wp-content/uploads/2016/06/white-letter-b-clip-art.png', class: 'logo_sign'), root_path%>
+        <nav>
+          <% if current_user %>
+              <%= link_to 'Edit account', edit_user_registration_path, class: 'btn btn-default' %>
+              <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: 'btn btn-default' %>
+          <% else %>
+              <%= link_to "Sign up", new_user_registration_path, class: 'btn btn-default' %>
+              <%= link_to "sign in", user_session_path, class: 'btn btn-default' %>
+          <% end %>
+        </nav>
+      </div>
+      <% if notice %>
+        <div>
+          <%= notice %>
+        </div>
+      <% elsif alert %>
+        <div>
+          <%= alert %>
+        </div>
+      <% end %>
+      
+      <div class='row'>
+        <%= yield %>
+      </div>
     </div>
-  </body>
+    </body>
 </html>

@@ -1,13 +1,9 @@
 <div class='welcome_view'>
     <% if current_user %>
-        <h1>Welcome <%= current_user.email %></h1>
+        <h1>Welcome</h1>
+        <h2> <%= current_user.email %> </h2>
     <% else %>
         <h1>Welcome to Blocmetrics</h1>
     <% end %>
-    <% if current_user %>
-        <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: 'btn btn-default' %>
-    <% else %>
-        <%= link_to "Sign up", new_user_registration_path, class: 'btn btn-default' %>
-        <%= link_to "sign in", user_session_path, class: 'btn btn-default' %>
-    <% end %>
+    
 </div>
