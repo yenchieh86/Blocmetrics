@@ -19,6 +19,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'figaro'
 gem 'pry'
 gem 'devise'
+gem 'friendly_id', '~> 5.1.0'
 
 group :production do
   gem 'pg'

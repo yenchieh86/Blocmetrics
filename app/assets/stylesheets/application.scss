@@ -40,6 +40,7 @@ nav {
     font-size: 150%;
 }
 
+.app_edit_page,
 .app_show_view,
 .app_new_view,
 .edit_user_page,
@@ -47,4 +48,21 @@ nav {
 .sign_up_view,
 .app_index_page {
     text-align: center;
+}
+
+.app_list {
+    border:1px solid black;
+    border-top-style:none
+}
+
+.app_list_id,
+.app_list_titel {
+    top: 9px;
+}
+
+.register_delete_app {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 25px;
+    font-size: 80%;
 }

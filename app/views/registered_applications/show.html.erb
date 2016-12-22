@@ -1,6 +1,5 @@
 <div class='app_show_view'>
     <h2><%= @application.title %></h2></br>
     <h3>URL: <%= @application.url %></h3>
-    
+    <%= link_to 'Edit', edit_user_application_path(current_user, @application), class: 'btn btn-info register_edit_app' %>
 </div>
-    

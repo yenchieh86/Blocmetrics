@@ -5,10 +5,19 @@
     <div>
         <%= link_to 'Register New Application', new_user_application_path(current_user), class: 'btn btn-primary register_new_app' %>
     </div>
-    
-    <% @applications.each do |app| %>
-        <div>
-            <%= link_to app.title, user_application_path(current_user, app), class: 'app_list_in_indexview' %>
-        </div>
-    <% end %>
+    <div class='row'>
+        <% @applications.each_with_index do |app, index| %>
+            <div class='col-md-12 app_list'>
+                <div class='col-md-4 app_list_id'>
+                    <%= index + 1 %>
+                </div>
+                <div class='col-md-4 app_list_titel'>
+                    <%= link_to app.title, user_application_path(current_user, app) %>
+                </div>
+                <div class='col-md-4'>
+                    <%= link_to 'Delete', user_application_path(current_user, app), method: :delete, class: 'btn btn-danger register_delete_app' %>
+                </div>
+            </div>
+        <% end %>
+    </div>
 </div>
