@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161222094209) do
+ActiveRecord::Schema.define(version: 20161222130809) do
 
   create_table "applications", force: :cascade do |t|
     t.string   "title",      default: "", null: false
@@ -22,6 +22,14 @@ ActiveRecord::Schema.define(version: 20161222094209) do
     t.index ["slug"], name: "index_applications_on_slug", unique: true
     t.index ["url"], name: "index_applications_on_url", unique: true
     t.index ["user_id"], name: "index_applications_on_user_id"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string   "name",           default: "", null: false
+    t.integer  "application_id"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.index ["application_id"], name: "index_events_on_application_id"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|

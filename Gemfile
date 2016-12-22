@@ -20,6 +20,7 @@ gem 'figaro'
 gem 'pry'
 gem 'devise'
 gem 'friendly_id', '~> 5.1.0'
+gem 'faker'
 
 group :production do
   gem 'pg'
@@ -33,7 +34,6 @@ group :development, :test do
   gem 'web-console', '>= 3.3.0'
   gem 'rspec-rails'
   gem 'shoulda'
-  gem 'faker'
   gem 'factory_girl_rails'
 end
 

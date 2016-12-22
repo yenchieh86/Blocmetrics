@@ -8,6 +8,7 @@ class RegisteredApplicationsController < ApplicationController
     
     def show
         find_target
+        @events_group = @application.events.group_by(&:name)
     end
     
     def new
