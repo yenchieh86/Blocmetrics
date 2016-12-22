@@ -1,0 +1,14 @@
+<div class='app_index_page'>
+    <div class='row'>
+        <h1><%= current_user.email %> 's applications list</h1>
+    </div>
+    <div>
+        <%= link_to 'Register New Application', new_user_application_path(current_user), class: 'btn btn-primary register_new_app' %>
+    </div>
+    
+    <% @applications.each do |app| %>
+        <div>
+            <%= link_to app.title, user_application_path(current_user, app), class: 'app_list_in_indexview' %>
+        </div>
+    <% end %>
+</div>

@@ -10,7 +10,7 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
-
+ *= require rails_bootstrap_forms
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -40,9 +40,11 @@ nav {
     font-size: 150%;
 }
 
+.app_show_view,
+.app_new_view,
 .edit_user_page,
 .sign_in_page,
 .sign_up_view,
-.welcome_view {
+.app_index_page {
     text-align: center;
 }

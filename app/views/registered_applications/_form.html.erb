@@ -1,0 +1,5 @@
+<%= form_for [@user, @application] do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.submit "Save" %>
+<% end %>
