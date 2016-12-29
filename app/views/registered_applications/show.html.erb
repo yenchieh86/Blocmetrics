@@ -3,8 +3,13 @@
     <h3>URL: <%= @application.url %></h3>
     <div class='col-md-12'>
         <% @events_group.each do |event| %>
-            <p>Name: <span class='event_name'><%= event[0] %></span>, Count: <span class='event_count'><%= event[1].length %></span></p>
+            <p>Name: <span class='event_name'><%= event[0] %></span>, Count: <span class='event_count'><%= event[1].count %></span></p>
         <% end %> 
+        <div class='col-md-12' >
+            <%= pie_chart @application.events.group(:name).count, class: 'graph' %>
+            <%= line_chart  @application.events.group(:name).count, class: 'graph' %>
+            <%= line_chart @application.events.group_by_day(:created_at).count %>
+        </div>
     </div>
     <%= link_to 'Edit', edit_user_application_path(current_user, @application), class: 'btn btn-info register_edit_app' %>
 </div>
