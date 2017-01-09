@@ -7,7 +7,7 @@
         <% end %> 
         <div class='col-md-12' >
             <%= pie_chart @application.events.group(:name).count, class: 'graph' %>
-            <%= line_chart  @application.events.group(:name).count, class: 'graph' %>
+            <%= line_chart @application.events.group('date("events"."created_at","start of day")').count %>
         </div>
     </div>
     <%= link_to 'Edit', edit_user_application_path(current_user, @application), class: 'btn btn-info register_edit_app' %>
