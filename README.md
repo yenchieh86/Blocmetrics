@@ -1,24 +1,50 @@
-# README
+# Blocmetrics
+## An analytics service and reporting tool that you can be used to track user activity and report results
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+###Features:
+ - A client-side JavaScript snippet that allows a user to track events on their website.
+ - A server-side API that captures and saves those events to a database.
+ - A Rails application that displays the captured event data for a user in a chart and line graph form.
 
-Things you may want to cover:
+###Getting Started:
 
-* Ruby version
+The client will add this script to their website/application
 
-* System dependencies
+```javascript
+var blocmetrics = {
+  report: function(event_name) {
+    var event = {
+      name: event_name
+    };
+    
+    var request = new XMLHttpRequest();
+    request.open("POST", "https://bloc-final-project-yenchieh86.c9users.io/api/events", true);
+    request.setRequestHeader('Content-Type', 'application/json');
 
-* Configuration
+    request.onreadystatechange = function() {
+    };
+    request.send(JSON.stringify(event));
+  }
+};
+```
 
-* Database creation
 
-* Database initialization
+For a user to track an event, they need to do is add the snippet `blocmetrics.report('event_name')` wherever desired.
 
-* How to run the test suite
+for example:
 
-* Services (job queues, cache servers, search engines, etc.)
+```javascript
+$(document).ready(
+  $('.btn-a').click(function() {
+    blocmetrics.report('name_of_event');
+  });
+)
+```
 
-* Deployment instructions
 
-* ...
+
+Screenshots
+-----------
+
+![Imgur](https://github.com/yenchieh86/Blocmetrics/blob/master/app/assets/images/ss1.png)
+![Imgur](https://github.com/yenchieh86/Blocmetrics/blob/master/app/assets/images/ss2.png)
