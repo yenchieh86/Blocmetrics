@@ -1,23 +1,25 @@
 <div class='app_index_page'>
-    <div class='row'>
-        <h1><%= current_user.email %> 's applications list</h1>
-    </div>
-    <div>
-        <%= link_to 'Register New Application', new_user_application_path(current_user), class: 'btn btn-primary register_new_app' %>
-    </div>
-    <div class='row'>
-        <% @applications.each_with_index do |app, index| %>
-            <div class='col-md-12 app_list'>
-                <div class='col-md-4 app_list_id'>
-                    <%= index + 1 %>
-                </div>
-                <div class='col-md-4 app_list_titel'>
-                    <%= link_to app.title, user_application_path(current_user, app) %>
-                </div>
-                <div class='col-md-4'>
-                    <%= link_to 'Delete', user_application_path(current_user, app), method: :delete, class: 'btn btn-danger register_delete_app' %>
-                </div>
-            </div>
-        <% end %>
-    </div>
+  <div class=col-md-12'>
+    <h1><%= current_user.email %> 's applications list</h1>
+  </div>
+  <div class=col-md-12'>
+    <%= link_to 'Register New Application', new_user_application_path(current_user), class: 'btn btn-primary register_new_app' %>
+  </div>
+  <div class='row'>
+    <% @applications.each_with_index do |app, index| %>
+      <div class='col-md-12 app_list'>
+        <div class='row'>
+          <div class='col-md-4 app_list_id'>
+            <%= index + 1 %>
+          </div>
+          <div class='col-md-4 app_list_titel'>
+            <%= link_to app.title, user_application_path(current_user, app) %>
+          </div>
+          <div class='col-md-4'>
+            <%= link_to 'Delete', user_application_path(current_user, app), method: :delete, class: 'btn btn-danger register_delete_app' %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>

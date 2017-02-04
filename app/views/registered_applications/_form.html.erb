@@ -1,11 +1,13 @@
-<%= form_for [@user, @application] do |f| %>
-    <div>
-        <%= f.label :title %>
-        <%= f.text_field :title %>
-    </div>
-    <div>
-        <%= f.label :url %>
-        <%= f.text_field :url %>
-    </div>
-    <%= f.submit "Save" %>
+<%= form_for [current_user, @application] do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  
+  <div>
+    <%= f.label :url %>
+    <%= f.text_field :url %>
+  </div>
+  
+  <%= f.submit "Save" %>
 <% end %>

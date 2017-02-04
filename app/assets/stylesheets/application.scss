@@ -1,45 +1,30 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require rails_bootstrap_forms
- */
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 .container-fluid {
-    padding: 0px;
+  padding: 0px;
 }
 
 .head_row {
-    background-color: black;
+  background-color: black;
 }
 
 .logo_sign {
-    height: 60px;
-    width: 60px;
+  height: 60px;
+  width: 60px;
 }
 
 nav {
-    float: right;
-    margin-top: 8px;
-    margin-right: 10px;
+  float: right;
+  margin-top: 8px;
+  margin-right: 10px;
 }
 
 .bg-info,
 .bg-danger {
-    text-align: center;
-    font-size: 150%;
+  text-align: center;
+  font-size: 150%;
 }
-
 
 .app_edit_page,
 .app_show_view,
@@ -48,33 +33,33 @@ nav {
 .sign_in_page,
 .sign_up_view,
 .app_index_page {
-    text-align: center;
+  text-align: center;
 }
 
 .app_list {
-    border:1px solid black;
-    border-top-style:none
+  border:1px solid black;
+  border-top-style:none
 }
 
 .app_list_id,
 .app_list_titel {
-    top: 9px;
+  top: 9px;
 }
 
 .register_delete_app {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    height: 25px;
-    font-size: 80%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: 25px;
+  font-size: 80%;
 }
 
 .event_name,
 .event_count {
-    font-weight: bold;
-    text-decoration: underline;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .graph {
-    width: 300px;
-    margin-right: auto;
+  width: 300px;
+  margin-right: auto;
 }

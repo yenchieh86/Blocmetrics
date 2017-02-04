@@ -5,7 +5,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
 gem 'rails', '~> 5.0.1'
 gem 'bootstrap-sass'
 gem 'bootstrap_form'
@@ -42,8 +41,6 @@ end
 group :development do
   gem 'sqlite3'
   gem 'listen', '~> 3.0.5'
-  
-  
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

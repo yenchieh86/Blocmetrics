@@ -1,0 +1,8 @@
+<div class='welcome_view'>
+  <% if current_user %>
+    <h1>Welcome</h1>
+    <h2> <%= current_user.email %> </h2>
+  <% else %>
+    <h1>Welcome to Blocmetrics</h1>
+  <% end %>
+</div>
