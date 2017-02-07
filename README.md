@@ -41,7 +41,6 @@ $(document).ready(
 )
 ```
 
-Visit the Heroku app: [Blocmetrics](https://yen-blocmetrics.herokuapp.com/)
 
 Screenshots
 -----------
