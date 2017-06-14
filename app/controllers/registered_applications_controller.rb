@@ -1,5 +1,6 @@
 class RegisteredApplicationsController < ApplicationController
-
+  before_filter :authenticate_user!
+  
   def index
     @applications = current_user.applications.where(user_id: current_user.id)
   end
